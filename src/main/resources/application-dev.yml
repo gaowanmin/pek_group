@@ -1,0 +1,62 @@
+miniWechat:
+  appId: wx72e52b4f44695e8
+  appSecret: ab69f88e69d4fdabeb8e597bae4ba86
+  token:
+  aesKey:
+
+server:
+  #配置服务器启动端口
+  port: 9191
+  servlet:
+    context-path: /airport-group
+
+# 数据库连接配置，Spring Boot 会自动加载 spring.datasource.* 相关配置，数据源就会自动注入到 sqlSessionFactory 中，sqlSessionFactory 会自动注入到 Mapper 中
+spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  mvc:
+    date-format: yyyy-MM-dd HH:mm:ss
+
+  datasource:
+  #172.17.12.172
+    url: "jdbc:mysql://mysql:3306/pek_group?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai"
+    username: "root"
+    password: "traffic"
+    hikari:
+      max-lifetime: 1800000
+      idleTimeout: 600000
+      connectionTimeout: 30000
+      maximumPoolSize: 15
+  #redis连接配置
+  redis:
+    timeout: 10000
+    # Redis服务器地址 内网地址10.44.59.211
+    host: myredis
+    # Redis服务器连接端口
+    port: 6379
+    # Redis服务器连接密码（默认为空）
+    password: traffic
+    # 连接池最大连接数（使用负值表示没有限制）
+    jedis:
+      pool:
+        max-active: 8
+        # 池内没有返回对象时 最大等待时间（使用负值表示没有限制）
+        max-wait: -1
+        # 连接池中的最大空闲连接
+        max-idle: 8
+        # 连接池中的最小空闲连接
+        min-idle: 2
+swagger:
+  enabled: true
+
+
+
+#行李查询账号
+userName: TXUser
+password: ac0795c10cdbc8f
+
+#获取token
+loginUrl: https://baggagep.api.com:8082/openApi/queryLogin
+#查询行李
+BaggageUrl: https://baggagep.api.com:8082/openApi/queryWithBaggage

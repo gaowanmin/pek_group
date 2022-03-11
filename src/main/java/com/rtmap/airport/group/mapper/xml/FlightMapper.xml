@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rtmap.airport.group.mapper.FlightMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.rtmap.airport.group.entity.Flight">
+        <id column="id" property="id" />
+        <result column="source_id" property="sourceId" />
+        <result column="gufi" property="gufi" />
+        <result column="unit_ufi" property="unitUfi" />
+        <result column="airline_iata" property="airlineIata" />
+        <result column="flight_number_iata" property="flightNumberIata" />
+        <result column="flight_date" property="flightDate" />
+        <result column="dep_or_arr" property="depOrArr" />
+        <result column="mission_property" property="missionProperty" />
+        <result column="flight_segment_dori" property="flightSegmentDori" />
+        <result column="code_share_flight_list" property="codeShareFlightList" />
+        <result column="reg_number" property="regNumber" />
+        <result column="aircraft_type" property="aircraftType" />
+        <result column="dep_ap" property="depAp" />
+        <result column="schedule_time_take_off" property="scheduleTimeTakeOff" />
+        <result column="estimate_take_off_time" property="estimateTakeOffTime" />
+        <result column="atot" property="atot" />
+        <result column="dep_terminal" property="depTerminal" />
+        <result column="arr_ap" property="arrAp" />
+        <result column="schedule_time_landing" property="scheduleTimeLanding" />
+        <result column="eldt" property="eldt" />
+        <result column="aldt" property="aldt" />
+        <result column="arr_terminal" property="arrTerminal" />
+        <result column="arr_stand" property="arrStand" />
+        <result column="cah_flight_status" property="cahFlightStatus" />
+        <result column="cnl_reason_chn" property="cnlReasonChn" />
+        <result column="mission_flyinfo" property="missionFlyinfo" />
+        <result column="check_in_counter" property="checkInCounter" />
+        <result column="dep_gate" property="depGate" />
+        <result column="expected_arrival_luggage_turntable" property="expectedArrivalLuggageTurntable" />
+        <result column="asbt" property="asbt" />
+        <result column="aebt" property="aebt" />
+        <result column="final_call_time" property="finalCallTime" />
+        <result column="baggage_arr_time" property="baggageArrTime" />
+        <result column="arr_last_luggage_time" property="arrLastLuggageTime" />
+        <result column="former_unit_ufi" property="formerUnitUfi" />
+        <result column="next_unit_ufi" property="nextUnitUfi" />
+        <result column="pre_atot" property="preAtot" />
+        <result column="next_aldt" property="nextAldt" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="del_status" property="delStatus" />
+    </resultMap>
+
+    <!--<select id="selectByFfids" resultMap="BaseResultMap" parameterType="List">-->
+        <!--select * from flight where unit_ufi in-->
+        <!--<foreach collection="ffidsList" item= "item" index ="index"-->
+                 <!--open= "(" close =")" separator=",">-->
+            <!--#{item}-->
+        <!--</foreach >-->
+    <!--</select>-->
+</mapper>

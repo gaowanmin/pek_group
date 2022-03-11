@@ -1,0 +1,1 @@
+package com.rtmap.airport.group.aop;import java.lang.annotation.*;/** * @Auther: shan * @Date:2022/2/17 * @Description: */@Target(ElementType.METHOD)@Retention(RetentionPolicy.RUNTIME)@Documentedpublic @interface LogAnnotation {    String value() default "";}

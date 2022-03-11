@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rtmap.airport.group.mapper.BasAirlineMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.rtmap.airport.group.entity.BasAirline">
+        <id column="airline_iata" property="airlineIata" />
+        <result column="airline_icao" property="airlineIcao" />
+        <result column="airline_chn" property="airlineChn" />
+        <result column="airline_chn_brief" property="airlineChnBrief" />
+        <result column="airline_eng" property="airlineEng" />
+        <result column="airline_nation" property="airlineNation" />
+        <result column="domint" property="domint" />
+        <result column="airline_operation" property="airlineOperation" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+</mapper>
